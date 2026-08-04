@@ -138,6 +138,7 @@
   font-weight: 400;
   line-height: 0.95;
   letter-spacing: 0.13em;
+  transform: translateX(0.065em);
   text-transform: uppercase;
 }
 
@@ -233,6 +234,7 @@
   font-weight: 400;
   line-height: 0.95;
   letter-spacing: 0.13em;
+  transform: translateX(0.065em);
   text-transform: uppercase;
 }
 
