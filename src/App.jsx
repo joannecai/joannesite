@@ -4,6 +4,7 @@ import heroPainting from '../paintings/Cai002.jpeg'
 import './App.css'
 
 const baseUrl = import.meta.env.BASE_URL
+const getRoute = () => window.location.hash.replace(/^#\/?|\/+$/g, '')
 
 const paintingImages = import.meta.glob('../paintings/*.jpeg', {
   eager: true,
@@ -74,9 +75,9 @@ const filters = [
 
 function Home() {
   const navigation = [
-    { label: 'works', href: `${baseUrl}works` },
-    { label: 'about', href: `${baseUrl}about` },
-    { label: 'contact', href: `${baseUrl}contact` },
+    { label: 'works', href: `${baseUrl}#/works` },
+    { label: 'about', href: `${baseUrl}#/about` },
+    { label: 'contact', href: `${baseUrl}#/contact` },
   ]
 
   return (
@@ -195,10 +196,13 @@ function Works() {
 }
 
 function App() {
-  const basePath = new URL(baseUrl, window.location.origin).pathname
-  const route = window.location.pathname
-    .slice(basePath.length)
-    .replace(/^\/+|\/+$/g, '')
+  const [route, setRoute] = useState(getRoute)
+
+  useEffect(() => {
+    const handleRouteChange = () => setRoute(getRoute())
+    window.addEventListener('hashchange', handleRouteChange)
+    return () => window.removeEventListener('hashchange', handleRouteChange)
+  }, [])
 
   return route === 'works' ? <Works /> : <Home />
 }
