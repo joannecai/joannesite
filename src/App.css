@@ -423,6 +423,13 @@ body.modal-open {
   flex: 0 1 auto;
 }
 
+.painting-modal__body img.is-portrait {
+  width: clamp(15rem, 32vw, 23rem);
+  max-width: 58%;
+  max-height: none;
+  flex-shrink: 1;
+}
+
 .painting-modal__info {
   flex: 1 1 14rem;
   min-width: 0;
@@ -565,6 +572,12 @@ body.modal-open {
     max-width: 100%;
     max-height: 52svh;
     object-fit: contain;
+  }
+
+  .painting-modal__body img.is-portrait {
+    width: min(100%, 28rem);
+    max-width: 100%;
+    margin-inline: auto;
   }
 }
 

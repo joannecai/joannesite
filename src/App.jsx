@@ -30,8 +30,8 @@ const paintings = paintingData
       year,
       medium,
       size,
-      ,
-      ,
+      height,
+      width,
       ,
       price,
       available,
@@ -52,6 +52,7 @@ const paintings = paintingData
       price,
       available: available === 'TRUE',
       image: imageByFilename[filename],
+      isPortrait: Number(height) > Number(width),
       tags: [
         pleinAir === 'TRUE' && 'Plein air',
         studio === 'TRUE' && 'Studio work',
@@ -159,7 +160,11 @@ function PaintingModal({ painting, onClose }) {
           <h2 id="painting-title">{painting.title}</h2>
         </header>
         <div className="painting-modal__body">
-          <img src={painting.image} alt={painting.title} />
+          <img
+            className={painting.isPortrait ? 'is-portrait' : undefined}
+            src={painting.image}
+            alt={painting.title}
+          />
           <aside className="painting-modal__info" aria-label="Painting information">
             <h3>Artwork details</h3>
             <dl>
