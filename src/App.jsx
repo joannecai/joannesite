@@ -73,6 +73,32 @@ const filters = [
   { label: 'Figures', test: (painting) => painting.tags.includes('Portraits & figures') },
 ]
 
+function SiteNav({ activePage }) {
+  const links = [
+    { label: 'Works', href: `${baseUrl}#/works`, page: 'works' },
+    { label: 'About', href: `${baseUrl}#/about`, page: 'about' },
+    { label: 'Contact', href: `${baseUrl}#/contact`, page: 'contact' },
+  ]
+
+  return (
+    <nav className="site-nav" aria-label="Primary navigation">
+      <a className="site-nav__artist" href={baseUrl}>Joanne Cai</a>
+      <div className="site-nav__links">
+        {links.map((link) => (
+          <a
+            key={link.page}
+            href={link.href}
+            className={activePage === link.page ? 'is-active' : ''}
+            aria-current={activePage === link.page ? 'page' : undefined}
+          >
+            {link.label}
+          </a>
+        ))}
+      </div>
+    </nav>
+  )
+}
+
 function Home() {
   const navigation = [
     { label: 'works', href: `${baseUrl}#/works` },
@@ -101,6 +127,12 @@ function Home() {
 }
 
 function PaintingModal({ painting, onClose }) {
+  const displayTags = [painting.isLandscape && 'Landscape', ...painting.tags].filter(Boolean)
+  const formattedPrice = new Intl.NumberFormat('en-CA', {
+    style: 'currency',
+    currency: 'CAD',
+  }).format(Number(painting.price))
+
   useEffect(() => {
     const handleKeyDown = (event) => event.key === 'Escape' && onClose()
     document.addEventListener('keydown', handleKeyDown)
@@ -123,21 +155,48 @@ function PaintingModal({ painting, onClose }) {
         <button className="painting-modal__close" type="button" onClick={onClose} aria-label="Close details">
           <span aria-hidden="true">×</span>
         </button>
-        <h2 id="painting-title">{painting.title}</h2>
+        <header className="painting-modal__header">
+          <h2 id="painting-title">{painting.title}</h2>
+        </header>
         <div className="painting-modal__body">
           <img src={painting.image} alt={painting.title} />
-          <div className="painting-modal__info">
-            <p>{painting.year}</p>
-            <p>{painting.medium}</p>
-            <p>{painting.size} inches</p>
-            <p className="painting-modal__availability">
-              {painting.available ? `Available · $${Number(painting.price).toLocaleString('en-CA')} CAD` : 'Not available'}
-            </p>
+          <aside className="painting-modal__info" aria-label="Painting information">
+            <h3>Artwork details</h3>
+            <dl>
+              <div>
+                <dt>Year</dt>
+                <dd>{painting.year}</dd>
+              </div>
+              <div>
+                <dt>Medium</dt>
+                <dd>{painting.medium}</dd>
+              </div>
+              <div>
+                <dt>Dimensions</dt>
+                <dd>{painting.size} in</dd>
+              </div>
+              <div>
+                <dt>Availability</dt>
+                <dd className={`detail-status ${painting.available ? 'is-available' : 'is-unavailable'}`}>
+                  <span aria-hidden="true" />
+                  {painting.available ? 'Available' : 'Not available'}
+                </dd>
+              </div>
+              {painting.available && (
+                <div>
+                  <dt>Price</dt>
+                  <dd>{formattedPrice} CAD</dd>
+                </div>
+              )}
+            </dl>
+          </aside>
+        </div>
+        <footer className="painting-modal__footer">
+          <p>Categories</p>
+          <div className="painting-modal__tags" aria-label="Artwork categories">
+            {displayTags.map((tag) => <span key={tag}>{tag}</span>)}
           </div>
-        </div>
-        <div className="painting-modal__tags" aria-label="Artwork tags">
-          {painting.tags.map((tag) => <span key={tag}>{tag}</span>)}
-        </div>
+        </footer>
       </section>
     </div>
   )
@@ -153,8 +212,8 @@ function Works() {
 
   return (
     <main className="works-page">
+      <SiteNav activePage="works" />
       <header className="works-header">
-        <a className="works-header__artist" href={baseUrl}>Joanne Cai</a>
         <h1>Works</h1>
         <p className="works-header__intro">Selected paintings</p>
         <div className="filters" aria-label="Filter artworks">
@@ -195,6 +254,17 @@ function Works() {
   )
 }
 
+function BlankPage({ page, title }) {
+  return (
+    <main className="blank-page">
+      <SiteNav activePage={page} />
+      <section className="blank-page__content" aria-labelledby={`${page}-title`}>
+        <h1 id={`${page}-title`}>{title}</h1>
+      </section>
+    </main>
+  )
+}
+
 function App() {
   const [route, setRoute] = useState(getRoute)
 
@@ -204,7 +274,10 @@ function App() {
     return () => window.removeEventListener('hashchange', handleRouteChange)
   }, [])
 
-  return route === 'works' ? <Works /> : <Home />
+  if (route === 'works') return <Works />
+  if (route === 'about') return <BlankPage page="about" title="About" />
+  if (route === 'contact') return <BlankPage page="contact" title="Contact" />
+  return <Home />
 }
 
 export default App
