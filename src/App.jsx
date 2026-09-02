@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import paintingData from '../Painting_info - Data.csv?raw'
 import heroPainting from '../paintings/Cai002.jpeg'
-import aboutPhoto from './assets/JoannePhoto.jpeg'
+import aboutPhoto from './assets/about-photo-placeholder.svg'
 import './App.css'
 
 const baseUrl = import.meta.env.BASE_URL
@@ -210,11 +210,14 @@ function PaintingModal({ painting, onClose }) {
 
 function Works() {
   const [activeFilter, setActiveFilter] = useState('All')
+  const [availableOnly, setAvailableOnly] = useState(false)
   const [selectedPainting, setSelectedPainting] = useState(null)
   const visiblePaintings = useMemo(() => {
     const filter = filters.find((item) => item.label === activeFilter)
-    return paintings.filter(filter.test)
-  }, [activeFilter])
+    return paintings
+      .filter(filter.test)
+      .filter((painting) => !availableOnly || painting.available)
+  }, [activeFilter, availableOnly])
 
   return (
     <main className="works-page">
@@ -236,6 +239,19 @@ function Works() {
             </button>
           ))}
         </div>
+        <label className="availability-toggle">
+          <span>Available only</span>
+          <span className="availability-toggle__switch">
+            <input
+              type="checkbox"
+              checked={availableOnly}
+              onChange={(event) => setAvailableOnly(event.target.checked)}
+            />
+            <span className="availability-toggle__track" aria-hidden="true">
+              <span className="availability-toggle__thumb" />
+            </span>
+          </span>
+        </label>
       </header>
 
       <section className="works-grid" aria-live="polite">
@@ -266,54 +282,27 @@ function About() {
       <SiteNav activePage="about" />
       <section className="about" aria-labelledby="about-title">
         <div className="about__photo">
-          <img src={aboutPhoto} alt="Portrait of the artist" />
+          <img src={aboutPhoto} alt="Placeholder portrait of the artist" />
         </div>
         <div className="about__bio">
           <h1 id="about-title">About</h1>
           <p>
-            Joanne Cai is an Edmonton-raised, Toronto-based artist who captures transitory moments
-            found in nature and domestic settings, primarily via plein air oil paintings. She is also
-            interested in forms such as collage, linocut printmaking, urban sketching, textile art, and
-            creative writing.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo consequat.
           </p>
           <p>
-            Outside of art, Joanne graduated with a Bachelor of Science in Mechanical Engineering
-            from the University of Alberta in 2025, and is currently pursuing a Doctorate of Applied
-            Science in Aerospace Science and Engineering at the University of Toronto.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+            dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </p>
           <p>
-            As an engineer by trade but a life-long artist, she is fascinated by the mechanisms by
-            which we observe and disseminate the world around us, and furthermore, how we
-            choose to represent it.
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
+            ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+            explicabo.
           </p>
-        </div>
-      </section>
-    </main>
-  )
-}
-
-function Contact() {
-  return (
-    <main className="contact-page">
-      <SiteNav activePage="contact" />
-      <section className="contact" aria-labelledby="contact-title">
-        <div className="contact_txt">
-          <h1 id="contact-title">Contact</h1>
-          <p>
-            Please email me at {' '}
-            <a href="mailto:joanne.luyang.cai@gmail.com">joanne.luyang.cai@gmail.com</a> for 
-            any inquiries regarding purchasing. 
-            All pieces are listed with updated pricing information in {' '}
-            <a href="https://joannecai.ca/#/works" target="_blank" rel="noopener noreferrer">
-            Works</a>, though we may need to discuss additional costs for shipping/drop-off/etc.
-          </p>
-            <a href="https://instagram.com/joannecai.art"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="instagram-button"
-          >
-            See more on Instagram
-          </a>
         </div>
       </section>
     </main>
@@ -341,8 +330,8 @@ function App() {
   }, [])
 
   if (route === 'works') return <Works />
-  if (route === 'about') return <About/>
-  if (route === 'contact') return <Contact/>
+  if (route === 'about') return <BlankPage page="about" title="About" />
+  if (route === 'contact') return <BlankPage page="contact" title="Contact" />
   return <Home />
 }
 
