@@ -224,11 +224,11 @@
 }
 
 .contact_txt a.instagram-button {
-  color: #83748C;
+  color: #f2f0e8;
   text-decoration: none;
 }
 
-.instagram-button {
+.contact_txt a.instagram-button {
   display: inline-block;
   margin-top: 1.5rem;
   padding: 0.9rem 1.75rem;
@@ -242,11 +242,11 @@
   transition: background 0.2s ease, transform 0.15s ease;
 }
 
-.instagram-button:hover {
+.contact_txt a.instagram-button:hover {
   background: #83748C;
 }
 
-.instagram-button:active {
+.contact_txt a.instagram-button:active {
   transform: scale(0.97);
 }
 
