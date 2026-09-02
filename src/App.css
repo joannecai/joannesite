@@ -238,7 +238,7 @@
   letter-spacing: 0.06em;
   text-decoration: none;
   text-align: center;
-  border-radius: 5px;
+  border-radius: 4px;
   transition: background 0.2s ease, transform 0.15s ease;
 }
 
