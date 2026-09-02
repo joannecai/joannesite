@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import paintingData from '../Painting_info - Data.csv?raw'
 import heroPainting from '../paintings/Cai002.jpeg'
-import aboutPhoto from './assets/JoannePhoto.png'
+import aboutPhoto from './assets/JoannePhoto.jpeg'
 import './App.css'
 
 const baseUrl = import.meta.env.BASE_URL
