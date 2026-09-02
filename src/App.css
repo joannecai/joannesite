@@ -236,7 +236,7 @@
   margin-top: 1.5rem;
   padding: 0.9rem 1.75rem;
   background: #272720;
-  color: #83748C;
+  color: #f2f0e8;
   font-size: 0.95rem;
   letter-spacing: 0.06em;
   text-decoration: none;
@@ -247,6 +247,7 @@
 
 .contact_txt a.instagram-button:hover {
   background: #83748C;
+  color: #f2f0e8;
 }
 
 .contact_txt a.instagram-button:active {
