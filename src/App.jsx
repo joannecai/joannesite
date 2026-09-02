@@ -314,7 +314,7 @@ function App() {
   }, [])
 
   if (route === 'works') return <Works />
-  if (route === 'about') return <BlankPage page="about" title="About" />
+  if (route === 'about') return <About />
   if (route === 'contact') return <BlankPage page="contact" title="Contact" />
   return <Home />
 }
