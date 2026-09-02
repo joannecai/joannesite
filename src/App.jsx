@@ -288,20 +288,42 @@ function About() {
         <div className="about__bio">
           <h1 id="about-title">About</h1>
           <p>
-            Joanne Cai is an Edmonton-raised, Toronto-based artist who captures transitory moments
-            found in nature and domestic settings, primarily via plein air oil paintings. She is also
-            interested in forms such as collage, linocut printmaking, urban sketching, textile art, and
-            creative writing.
+            Joanne Cai is an Edmonton-raised, Toronto-based artist whose practice mainly consists of plein air 
+            and alla prima oil paintings. Her work focuses on transitory moments in nature and domestic settings, 
+            with additional influence from her Chinese-Canadian upbringing and her training in Impressionist and 
+            post-Impressionist art techniques. She is also interested in forms such as collage, linocut printmaking, 
+            urban sketching, textile art, and creative writing.
           </p>
           <p>
             Outside of art, Joanne graduated with a Bachelor of Science in Mechanical Engineering
-            from the University of Alberta in 2025, and is currently pursuing a Doctorate of Applied
-            Science in Aerospace Science and Engineering at the University of Toronto.
+            from the University of Alberta in 2025, and is currently pursuing a PhD in Aerospace Science and 
+            Engineering at the University of Toronto.
           </p>
           <p>
             As an engineer by trade but a life-long artist, she is fascinated by the mechanisms by
             which we observe and disseminate the world around us, and furthermore, how we
             choose to represent it.
+          </p>
+          <p>
+            Writing that helps me make art: 
+            <ul>
+              <li>'Seeing' by Annie Dillard</li>
+              <li>'Transcription' by Ben Lerner</li>
+              <li>'Francisco' by Allison Mills Newman</li>
+              <li>'Notes of a Crocodile' by Qiu Miaojin</li>
+            </ul>
+          </p>
+          <p>
+            Art I like right now: 
+            <ul>
+              <li>'Island in the Attersee' by Gustav Klimt</li>
+              <li>'Flatty' by David Blackwood</li>
+              <li>'Autumn Day' by Leo Gestel</li>
+              <li>'Relaxing in Water' by Liu Xiaodong</li>
+            </ul>
+          </p>
+          <p>
+            Website built by Eric Xiong.
           </p>
         </div>
       </section>
@@ -318,11 +340,13 @@ function Contact() {
           <h1 id="contact-title">Contact</h1>
           <p>
             Please email me at {' '}
-            <a href="mailto:joanne.luyang.cai@gmail.com">joanne.luyang.cai@gmail.com</a>. 
+            <a href="mailto:joanne.luyang.cai@gmail.com">joanne.luyang.cai@gmail.com</a> 
             for any inquiries regarding purchasing. 
-            All pieces are listed with updated pricing information in {' '}
+          </p>
+          <p>
+            All pieces are listed with pricing information {' '}
             <a href="https://joannecai.ca/#/works" target="_blank" rel="noopener noreferrer">
-            Works</a>, though we may need to discuss additional costs for shipping/drop-off/etc.
+            here</a>, though we may need to discuss additional costs for shipping/drop-off/etc.
           </p>
             <a href="https://instagram.com/joannecai.art"
             target="_blank"
