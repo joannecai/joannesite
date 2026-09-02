@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import paintingData from '../Painting_info - Data.csv?raw'
 import heroPainting from '../paintings/Cai002.jpeg'
-import aboutPhoto from './assets/about-photo-placeholder.svg'
+import aboutPhoto from './assets/JoannePhoto.jpeg'
 import './App.css'
 
 const baseUrl = import.meta.env.BASE_URL
@@ -266,26 +266,46 @@ function About() {
       <SiteNav activePage="about" />
       <section className="about" aria-labelledby="about-title">
         <div className="about__photo">
-          <img src={aboutPhoto} alt="Placeholder portrait of the artist" />
+          <img src={aboutPhoto} alt="Portrait of the artist" />
         </div>
         <div className="about__bio">
           <h1 id="about-title">About</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-            commodo consequat.
+            Joanne Cai is an Edmonton-raised, Toronto-based artist who captures transitory moments
+            found in nature and domestic settings, primarily via plein air oil paintings. She is also
+            interested in forms such as collage, linocut printmaking, urban sketching, textile art, and
+            creative writing.
           </p>
           <p>
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-            dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            Outside of art, Joanne graduated with a Bachelor of Science in Mechanical Engineering
+            from the University of Alberta in 2025, and is currently pursuing a Doctorate of Applied
+            Science in Aerospace Science and Engineering at the University of Toronto.
           </p>
           <p>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
-            ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
-            explicabo.
+            As an engineer by trade but a life-long artist, she is fascinated by the mechanisms by
+            which we observe and disseminate the world around us, and furthermore, how we
+            choose to represent it.
+          </p>
+        </div>
+      </section>
+    </main>
+  )
+}
+
+function Contact() {
+  return (
+    <main className="contact-page">
+      <SiteNav activePage="contact" />
+      <section className="contact" aria-labelledby="contact-title">
+        <div className="contact_txt">
+          <h1 id="contact-title">Contact</h1>
+          <p>
+            Please email me at joanne.luyang.cai@gmail.com for any inquiries regarding purchasing. 
+            All pieces are listed with updated pricing information on this website.
+          </p>
+          <p>
+            If you are interested in working or painting together, you can also reach out. 
+            I am always up for a plein air session :)
           </p>
         </div>
       </section>
@@ -314,8 +334,8 @@ function App() {
   }, [])
 
   if (route === 'works') return <Works />
-  if (route === 'about') return <BlankPage page="about" title="About" />
-  if (route === 'contact') return <BlankPage page="contact" title="Contact" />
+  if (route === 'about') return <About/>
+  if (route === 'contact') return <Contact/>
   return <Home />
 }
 
