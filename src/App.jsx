@@ -305,7 +305,7 @@ function Contact() {
             for any inquiries regarding purchasing. 
             All pieces are listed with updated pricing information in {' '}
             <a href="https://joannecai.ca/#/works" target="_blank" rel="noopener noreferrer">
-            Works </a>, though additional costs may be incurred for shipping/drop-off/etc.
+            Works</a>, though we may need to discuss additional costs for shipping/drop-off/etc.
           </p>
             <a href="https://instagram.com/joannecai.art"
             target="_blank"
