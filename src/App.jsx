@@ -301,16 +301,19 @@ function Contact() {
           <h1 id="contact-title">Contact</h1>
           <p>
             Please email me at {' '}
-            <a href="mailto:joanne.luyang.cai@gmail.com">joanne@joannecai.ca</a>. 
+            <a href="mailto:joanne.luyang.cai@gmail.com">joanne.luyang.cai@gmail.com</a>. 
             for any inquiries regarding purchasing. 
             All pieces are listed with updated pricing information in {' '}
             <a href="https://joannecai.ca/#/works" target="_blank" rel="noopener noreferrer">
-            Works </a>., though additional costs may be incurred for shipping/drop-off/etc.
+            Works </a>, though additional costs may be incurred for shipping/drop-off/etc.
           </p>
-          <p>
-            If you are interested in working or painting together, you can also reach out. 
-            I am always up for a plein air session :)
-          </p>
+            <a href="https://instagram.com/joannecai.art"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="instagram-button"
+          >
+            See more on Instagram
+          </a>
         </div>
       </section>
     </main>

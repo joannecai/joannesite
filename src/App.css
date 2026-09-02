@@ -204,7 +204,7 @@
 .contact_txt p {
   text-align: center;
   margin: 0 0 1.1rem;
-  color: #443B45;
+  color: #45443b;
   font-size: 1.02rem;
   line-height: 1.65;
 }
@@ -220,7 +220,7 @@
 }
 
 .contact_txt a:hover {
-  color: #863bff; /* the purple from your favicon, as an accent */
+  color: #443B45; /* the purple from your favicon, as an accent */
 }
 
 /* Empty interior pages */
