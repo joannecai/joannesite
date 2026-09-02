@@ -179,6 +179,80 @@
   }
 }
 
+/* Contact */
+.contact-page {
+  min-height: 100svh;
+  padding: 0 clamp(1rem, 3.6vw, 4rem);
+  color: #272720;
+  background: #f2f0e8;
+}
+
+.contact {
+  max-width: 34rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact_txt h1 {
+  text-align: center;
+  margin: 0 0 1.5rem;
+  font-size: clamp(2.6rem, 4.4vw, 3.6rem);
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: 0.1em;
+  transform: translateX(0.05em);
+  text-transform: uppercase;
+}
+
+.contact_txt p {
+  text-align: center;
+  margin: 0 0 1.1rem;
+  color: #45443b;
+  font-size: 1.02rem;
+  line-height: 1.65;
+}
+
+.contact_txt p:last-child {
+  margin-bottom: 0;
+}
+
+.contact_txt a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.contact_txt a:hover {
+  color: #83748C;
+}
+
+.contact_txt a.instagram-button {
+  color: #f2f0e8;
+  text-decoration: none;
+}
+
+.contact_txt a.instagram-button {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.9rem 1.75rem;
+  background: #45443b;
+  color: #f2f0e8;
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 4px;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.contact_txt a.instagram-button:hover {
+  background: #83748C;
+}
+
+.contact_txt a.instagram-button:active {
+  transform: scale(0.97);
+}
+
 /* Empty interior pages */
 .blank-page {
   min-height: 100svh;
