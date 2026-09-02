@@ -323,6 +323,7 @@ function About() {
             </ul>
           </p>
           <p>
+            {" "}
             Website built by Eric Xiong.
           </p>
         </div>
@@ -340,7 +341,7 @@ function Contact() {
           <h1 id="contact-title">Contact</h1>
           <p>
             Please email me at {' '}
-            <a href="mailto:joanne.luyang.cai@gmail.com">joanne.luyang.cai@gmail.com</a> 
+            <a href="mailto:joanne.luyang.cai@gmail.com">joanne.luyang.cai@gmail.com </a> 
             for any inquiries regarding purchasing. 
           </p>
           <p>
