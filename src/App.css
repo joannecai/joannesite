@@ -220,7 +220,35 @@
 }
 
 .contact_txt a:hover {
-  color: #443B45; /* the purple from your favicon, as an accent */
+  color: #83748C;
+}
+
+.contact_txt a.instagram-button {
+  color: #83748C;
+  text-decoration: none;
+}
+
+.instagram-button {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.9rem 1.75rem;
+  background: #272720;
+  color: #83748C;
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 2px;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.instagram-button:hover {
+  background: #45443b;
+}
+
+.instagram-button:active {
+  transform: scale(0.97);
 }
 
 /* Empty interior pages */
