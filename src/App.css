@@ -204,13 +204,23 @@
 .contact_txt p {
   text-align: center;
   margin: 0 0 1.1rem;
-  color: #45443b;
+  color: #443B45;
   font-size: 1.02rem;
   line-height: 1.65;
 }
 
 .contact_txt p:last-child {
   margin-bottom: 0;
+}
+
+.contact_txt a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.contact_txt a:hover {
+  color: #863bff; /* the purple from your favicon, as an accent */
 }
 
 /* Empty interior pages */

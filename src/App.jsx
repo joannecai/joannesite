@@ -300,8 +300,12 @@ function Contact() {
         <div className="contact_txt">
           <h1 id="contact-title">Contact</h1>
           <p>
-            Please email me at joanne.luyang.cai@gmail.com for any inquiries regarding purchasing. 
-            All pieces are listed with updated pricing information on this website.
+            Please email me at {' '}
+            <a href="mailto:joanne.luyang.cai@gmail.com">joanne@joannecai.ca</a>. 
+            for any inquiries regarding purchasing. 
+            All pieces are listed with updated pricing information in {' '}
+            <a href="https://joannecai.ca/#/works" target="_blank" rel="noopener noreferrer">
+            Works </a>., though additional costs may be incurred for shipping/drop-off/etc.
           </p>
           <p>
             If you are interested in working or painting together, you can also reach out. 
