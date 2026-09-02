@@ -235,10 +235,11 @@
   display: inline-block;
   margin-top: 1.5rem;
   padding: 0.9rem 1.75rem;
-  background: #45443b;
-  color: #f2f0e8;
+  background: #272720;
+  color: #83748C;
   font-size: 0.95rem;
   letter-spacing: 0.06em;
+  text-transform: uppercase;
   text-decoration: none;
   text-align: center;
   border-radius: 4px;
