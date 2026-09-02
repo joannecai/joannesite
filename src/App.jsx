@@ -106,6 +106,7 @@ function Home() {
     { label: 'works', href: `${baseUrl}#/works` },
     { label: 'about', href: `${baseUrl}#/about` },
     { label: 'contact', href: `${baseUrl}#/contact` },
+    { label: 'instagram', href: `https://instagram.com/joannecai.art` }
   ]
 
   return (
@@ -240,7 +241,7 @@ function Works() {
           ))}
         </div>
         <label className="availability-toggle">
-          <span>Available only</span>
+          <span>Show available pieces only</span>
           <span className="availability-toggle__switch">
             <input
               type="checkbox"
@@ -357,8 +358,8 @@ function App() {
   }, [])
 
   if (route === 'works') return <Works />
-  if (route === 'about') return <BlankPage page="about" title="About" />
-  if (route === 'contact') return <BlankPage page="contact" title="Contact" />
+  if (route === 'about') return <About />
+  if (route === 'contact') return <Contact />
   return <Home />
 }
 
