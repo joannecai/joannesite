@@ -106,7 +106,8 @@ function Home() {
     { label: 'works', href: `${baseUrl}#/works` },
     { label: 'about', href: `${baseUrl}#/about` },
     { label: 'contact', href: `${baseUrl}#/contact` },
-    { label: 'instagram', href: `https://instagram.com/joannecai.art` }
+    { label: 'instagram', href: `https://instagram.com/joannecai.art` },
+    { label: 'substack', href: `https://sundeww.substack.com/` }
   ]
 
   return (
@@ -341,8 +342,8 @@ function Contact() {
           <h1 id="contact-title">Contact</h1>
           <p>
             Please email me at {' '}
-            <a href="mailto:joanne.luyang.cai@gmail.com">joanne.luyang.cai@gmail.com </a> 
-            for any inquiries regarding purchasing. 
+            <a href="mailto:joanne.luyang.cai@gmail.com">joanne.luyang.cai@gmail.com</a> 
+             for any inquiries regarding purchasing. 
           </p>
           <p>
             All pieces are listed with pricing information {' '}
