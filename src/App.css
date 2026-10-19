@@ -51,7 +51,7 @@
  
 .home__nav {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   align-items: center;
   margin-top: clamp(2.1rem, 3.2vw, 3.5rem);
 }
