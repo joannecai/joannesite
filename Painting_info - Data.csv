@@ -7,7 +7,7 @@ Cai004,Red house,2026,oil on masonite,5x7,5,7,1.5,52.5,TRUE,TRUE,FALSE,FALSE,TRU
 Cai005,Graduation flowers,2026,oil on masonite,9x12,9,12,1.75,189,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE
 Cai006,Tomato and egg (ji dan chao xi hong si),2026,oil on masonite,14x11,14,11,1.75,269.5,FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE
 Cai007,Nic driving,2026,oil on masonite,8x12,8,12,1.5,144,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE
-Cai008,On top of a watch tower,2026,oil on masonite,8x10,8,10,1.5,120,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE
+Cai008,On top of a watch tower,2026,oil on masonite,8x10,8,10,1.5,220 (FRAMED),TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE
 Cai009,Young trilliums,2026,oil on masonite,7x5,7,5,1.5,52.5,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE
 Cai010,A rainy morning at the campsite 1,2026,oil on masonite,8x10,8,10,1.5,120,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE
 Cai011,A rainy morning at the campsite 2,2026,oil on masonite,8x8,8,8,1.5,96,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE
@@ -20,3 +20,7 @@ Cai017,Toronto Island Water 1,2026,oil on masonite,6x8,6,8,1.5,72,TRUE,TRUE,FALS
 Cai018,All beef hot dogs,2026,oil on masonite,8x12,8,12,1.5,144,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
 Cai019,Graduate students see the sun,2026,oil on masonite,8x5,8,5,1.5,60,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE
 Cai020,Toronto Island Water 2,2026,oil on masonite,6x8,6,8,1.5,72,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE
+Cai021,Path along Niagara River,2026,oil on masonite,,,,,,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE
+Cai022,Fort Niagara which is in America,2026,oil on masonite,,,,,,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE
+Cai023,Hibiscus in the afternoon,2026,oil on masonite,,12,8,,,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE
+Cai024,Desk pumpkins,2026,oil on masonite,,,,,,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE
